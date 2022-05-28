@@ -1,0 +1,989 @@
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: color 0.3s;
+    -o-transition: color 0.3s;
+    transition: color 0.3s;
+}
+header {
+    background-color: white;
+    height: 64px;
+}
+body {
+    background-color: #f3f3f3;
+    /* overflow-x: hidden; */
+    height: 2000px;
+    font-family: Play, Arial, sans-serif !important;
+}
+.magnifier {
+    margin-left: 4px;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+}
+
+h1 {
+    font-weight: 700 !important;
+    font-size: 20px !important;
+}
+
+.show {
+    display: block !important;
+}
+
+.price {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.more {
+    display: block;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 12px;
+    text-align: center;
+    padding: 27px 5px;
+    font-weight: 600;
+    height: auto;
+}
+
+.more:hover {
+    color: #ff793a;
+}
+
+a.arrow:hover {
+    cursor: pointer;
+}
+
+a.not-allowed:hover {
+    cursor: not-allowed;
+}
+
+.discount {
+    color: white;
+    font-weight: 500;
+    background-color: #01b599;
+    padding: 6px 12px;
+    display: inline;
+}
+
+.items {
+    margin: auto;
+    max-width: 1286px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.items .item {
+    max-width: 274px;
+    color: white;
+}
+
+.items .item img {
+    max-width: 274px;
+    width: 100%;
+    height: 128px;
+}
+
+.items .item > div {
+    background: #1c1c1c;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 40px;
+}
+
+.items .item .discount,
+.items .item .price {
+    margin-right: 7px;
+}
+.dropdown-content {
+    float: left;
+    overflow: hidden;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 100%;
+    left: 0;
+    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    display: none;
+}
+
+.header {
+    max-width: 1286px;
+    margin: auto;
+}
+
+.small_arrows {
+    position: relative;
+}
+
+.small_arrows .arrow {
+    position: absolute;
+    top: 0;
+    display: inline-block;
+    border-radius: 100px;
+    border: 1px solid #e2e2e2;
+    padding: 14px 15px;
+    -webkit-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    width: 33px;
+    height: 31px;
+}
+
+.small_arrows .arrow.right {
+    background: url(https://steampay.com/img/svg/next-round.svg) 50% no-repeat;
+    right: 12px;
+}
+
+.small_arrows .arrow.left {
+    right: 48px;
+    background: url(https://steampay.com/img/svg/prev-round.svg) 50% no-repeat;
+}
+
+header .headerDiv {
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+
+    width: 1200px;
+    height: 4em;
+}
+
+header .steampay {
+    margin-left: 40px !important;
+}
+
+header .catalogue,
+.list {
+    cursor: pointer;
+}
+
+header .searchOfGames {
+    position: absolute !important;
+    padding: 18px 1px;
+    border: none;
+    width: 110px;
+    right: -70px;
+    /* top: -32px; */
+    background-color: #fff;
+}
+
+/* margin-left ПОРТИТ РАБОТУ DROPDOWN */
+header .list {
+    margin-left: -108px !important;
+    margin-top: 10px !important;
+    -webkit-transition: fill 0.5s;
+    -o-transition: fill 0.5s;
+    transition: fill 0.5s;
+}
+
+header .list:hover {
+    fill: #ff793a;
+}
+header .searchOfGames:hover {
+    color: #ff793a;
+}
+
+header .catalogue {
+    margin-left: -5px !important;
+}
+
+header .currency {
+    font-size: 31px;
+    margin-right: -110px !important;
+}
+
+header a:hover:not(.currency) {
+    color: #ff793a;
+}
+
+header .currency:hover {
+    color: #ff793a;
+}
+
+header .support {
+    margin-left: -93px !important;
+}
+
+header .myBuys {
+    margin-left: -93px !important;
+}
+
+/* open trash_can */
+
+#open-button {
+    overflow: hidden;
+    height: 40px;
+    font-weight: 300;
+    -webkit-transition: height 0.5s;
+    -o-transition: height 0.5s;
+    transition: height 0.5s;
+    /* margin-right: -250px; */
+    /* position: relative; */
+    /* margin: auto; */
+    /* float: right; */
+}
+/* 
+#open-button .bi-trash {
+    position: relative;
+} */
+
+#open-button button {
+    width: 100%;
+    display: block;
+    padding: 8px 1px;
+    background-color: rgb(66, 161, 255);
+    color: white;
+    border: none;
+    position: relative;
+}
+
+#open-button.show {
+    overflow: hidden;
+    height: 280px;
+    -webkit-transition: height 0.5s;
+    -o-transition: height 0.5s;
+    transition: height 0.5s;
+    width: 280px;
+}
+
+#opencontent {
+    width: 280px;
+    background: white;
+    /* position: absolute; */
+}
+
+#opencontent .result,
+.game span {
+    float: right;
+}
+
+/* #opencontent .game {
+  margin-top: 10px;
+}
+#opencontent .result {
+  margin-top: 10px;
+} */
+
+#opencontent .wrapperDiv {
+    padding: 20px;
+    font-size: 12px;
+    /* position: absolute; */
+}
+
+#opencontent .wrapperDiv svg {
+    margin-bottom: 3px;
+}
+
+#opencontent .wrapperDiv svg:hover {
+    cursor: pointer;
+}
+
+#opencontent.wrapperDiv strong {
+    font-weight: 600;
+}
+
+#opencontent .wrapperDiv .game-money {
+    font-size: 14px;
+}
+
+#opencontent .wrapperDiv .result-money {
+    font-size: 16px;
+}
+
+main {
+    background-color: rgb(50, 50, 50);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    height: 584px;
+}
+
+main .slider {
+    width: 96%;
+    max-width: 1296px;
+    margin-top: 30px;
+}
+
+main .slide div:nth-of-type(1) {
+    width: 70%;
+    height: 500px;
+    float: left;
+
+    background: url(https://steampay.com/slider/Back%204%20Blood.jpg?1643046772)
+        no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+main .slide div:nth-of-type(2),
+main .slide div:nth-of-type(3) {
+    width: 30%;
+    float: right;
+    height: 250px;
+    background: url(https://steampay.com/slider/PAYDAY%202.jpg) no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+main .arrows {
+    position: absolute;
+    margin: 0 auto;
+    margin-top: 260px;
+    user-select: none;
+    width: 1596px;
+}
+
+main .left {
+    float: left;
+}
+
+main .right {
+    float: right;
+}
+
+/* main #carouselExampleIndicators {
+    width: 500px;
+}
+
+
+main .carousel-item img:nth-of-type(1) {
+    float: left;
+    width: 70% !important;
+}
+
+main .images-wrapper {
+    float: right;
+    width: 30% !important;
+}
+ 
+
+main .images-wrapper .img:nth-of-type(1),
+main .images-wrapper .img:nth-of-type(2){
+    width: 100% !important;
+    background: url(https://upload.wikimedia.org/wikipedia/ru/4/4e/Mortal_Kombat_11.jpg)  no-repeat cover;
+} */
+
+body > .wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    justify-content: center;
+}
+
+body > .wrapper .inner-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+.sec0 {
+    max-width: 900px;
+    margin-left: 40px;
+}
+
+.sec0 .bestseller-content,
+.sec0 .looked-for-content {
+    display: none;
+}
+
+.sec0 nav {
+    border-bottom: 2px solid #999999;
+    font-size: 24px;
+    background-color: #f3f3f3 !important;
+    margin-top: 10px;
+    /* width: 800px; */
+}
+
+.sec0 nav a {
+    margin-bottom: -10px;
+    padding-bottom: 20px;
+    padding-left: 23px !important;
+    border: 0px solid #ff793a;
+}
+
+.sec0 article {
+    margin-top: 40px;
+}
+
+.sec0 article h2 {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.sec0 article .genre {
+    color: rgb(120, 120, 120);
+    font-weight: 300;
+}
+
+.sec0 article .price {
+    font-size: 22px;
+    font-weight: 600;
+}
+.sec0 article a {
+    width: 900px;
+    display: grid;
+    grid-template-columns: 1fr 300px repeat(2, 1fr);
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    -webkit-transition: -webkit-filter 0.5s;
+    transition: -webkit-filter 0.5s;
+    -o-transition: filter 0.5s;
+    transition: filter 0.5s;
+    transition: filter 0.5s, -webkit-filter 0.5s;
+    margin-top: 2px;
+}
+
+.sec0 article a:hover {
+    -webkit-filter: drop-shadow(0 0 0.75rem rgba(15, 15, 15, 0.253));
+    filter: drop-shadow(0 0 0.75rem rgba(15, 15, 15, 0.253));
+}
+
+.sec0 article a:hover h1 {
+    color: #ff793a;
+}
+
+.sec0 article .game {
+    margin-left: 15px !important;
+}
+
+section.discounts,
+section.last-sales {
+    float: right;
+    width: 380px;
+    margin-top: 44px;
+    margin-left: 25px;
+}
+
+section.discounts article,
+section.last-sales article {
+    margin-top: 30px;
+}
+
+section.discounts span.aside-block {
+    position: absolute;
+    font-size: 15px;
+    color: rgb(120, 120, 120);
+    margin-left: 84px;
+    margin-top: -10px;
+    /* margin-bottom: -260px !important; */
+}
+
+section.discounts a,
+section.last-sales a {
+    width: 380px;
+    height: 88px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 60px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    -webkit-transition: -webkit-filter 0.5s;
+    transition: -webkit-filter 0.5s;
+    -o-transition: filter 0.5s;
+    transition: filter 0.5s;
+    transition: filter 0.5s, -webkit-filter 0.5s;
+    margin-top: 2px;
+}
+
+section.discounts img,
+section.last-sales img {
+    width: 100px;
+    height: 46px;
+}
+
+section.discounts h2,
+section.last-sales h2 {
+    font-weight: 400;
+    font-size: 14px;
+}
+
+section.discounts .right,
+section.last-sales .right {
+    text-align: center;
+}
+
+section.discounts .more-games {
+    margin-top: -25px;
+}
+
+section.discounts .more-games a {
+    background-color: #fff;
+}
+
+section.discounts .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 14.5px;
+}
+
+section.discounts .price {
+    margin-top: 6px;
+}
+
+section.categories {
+    background-color: #0d0e10;
+    padding: 85px 0;
+    color: white;
+}
+
+section.categories .container-fluid {
+    max-width: 1286px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+section.categories h1 {
+    color: #fff;
+}
+section.categories .categories_inner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+section.categories .categories_inner > div {
+    width: 182px;
+    height: 129px;
+    background-color: #393f42;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+}
+
+section.categories .categories_inner > div > h2 {
+    font-size: 14px;
+    color: #fff;
+}
+
+section.categories [href="#all"] {
+    color: white;
+}
+
+.calendar {
+    background-color: #f6f6f6;
+    padding: 65px 0;
+}
+
+.calendar h1 {
+    margin-bottom: 20px;
+}
+
+.calendar .container-fluid {
+    max-width: 1286px;
+}
+.calendar .container-fluid .container-inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.calendar .container-inner div {
+    display: inline-block;
+}
+
+.calendar .container-inner div:not(.calendar .container-inner-1div) {
+    margin-left: 30px;
+}
+
+.calendar img {
+    border-bottom: 4px solid rgb(24, 14, 167);
+    padding-bottom: 20px;
+}
+
+.popular {
+    background-color: #252627;
+    padding: 65px 0;
+}
+
+.popular .div0 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
+.popular .div0 nav {
+    border-bottom: 2px solid #999999;
+    width: 56%;
+    max-width: 792px;
+    margin-bottom: 45px;
+}
+
+.popular .div0 ul {
+    margin: auto;
+}
+
+.popular h1 {
+    color: white;
+}
+
+.popular a {
+    color: rgb(180, 180, 180) !important;
+    font-size: 17px;
+    font-weight: 700;
+}
+.popular a:hover {
+    color: white !important;
+}
+
+.popular .small_arrows {
+    margin-bottom: 60px;
+}
+
+.popular .small_arrows .arrow {
+    border: 1px solid #4d4e4e;
+}
+
+.popular .small_arrows .arrow.right {
+    background: url(https://steampay.com/img/svg/next-round-light.svg) 50%
+        no-repeat;
+    right: 12px;
+}
+
+.popular .small_arrows .arrow.left {
+    right: 48px;
+    background: url(https://steampay.com/img/svg/prev-round-light.svg) 50%
+        no-repeat;
+}
+
+.popular
+    .item:not(.popular .item:nth-of-type(1), .popular
+        .item:nth-of-type(2), .popular .item:nth-of-type(3), .popular
+        .item:nth-of-type(4)) {
+    margin-top: 30px;
+}
+
+.popular .content-100,
+.popular .content-300,
+.popular .content-700,
+.popular .content-900 {
+    display: none;
+}
+
+.deflation {
+    background: #f6f6f6;
+    padding: 65px 0;
+}
+
+.deflation h1 {
+    float: left;
+    margin-bottom: 10px;
+}
+
+.deflation .small_arrows {
+    float: right;
+}
+
+.deflation .items {
+    clear: both;
+}
+.deflation .items .item {
+    margin-top: 20px;
+}
+
+.what-is {
+    background-color: #e9e9e9;
+    padding: 70px 0;
+    overflow: hidden;
+}
+.what-is h1 {
+    margin-bottom: 20px;
+}
+
+.what-is > div {
+    max-width: 1296px;
+    margin: auto;
+    background-color: #e9e9e9;
+}
+.what-is .what-is-inner {
+    max-width: 828px;
+    float: left;
+}
+
+.what-is .what-is-inner p {
+    color: #6f6f6f;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.what-is .group {
+    /* width: 330px; */
+    background: white;
+    float: right;
+    padding: 14px;
+}
+
+.what-is .group a {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.what-is .group p {
+    font-size: 13px;
+}
+
+.what-is .group img {
+    border-radius: 100%;
+}
+
+.what-is .group button {
+    margin: auto;
+    padding: 7px 16px 8px;
+    background-color: #507eb3;
+    color: white;
+    border: 0;
+    display: block;
+    width: 100%;
+    border-radius: 4px;
+    margin-top: 8px;
+}
+
+footer {
+    overflow: hidden;
+    padding: 70px 20px 35px;
+    background: #0d0e10;
+    color: white;
+}
+footer .footer-items {
+    max-width: 1280px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto;
+
+    border-bottom: 1px solid #242425;
+    padding-bottom: 20px;
+}
+footer .footer-items img {
+    width: 40px;
+    height: 40px;
+}
+
+footer .footer-items .item {
+    display: flex;
+    flex-direction: row;
+    /* margin-left: 30px; */
+}
+footer .footer-items .item div {
+    margin-left: 20px;
+}
+footer .footer_bottom {
+    color: hsla(0, 0%, 100%, 0.3);
+    padding-top: 20px;
+    /* display: flex;
+    justify-content: center; */
+}
+.footer_bottom a {
+    color: hsla(0, 0%, 100%, 0.3);
+    font-size: 19px;
+}
+
+footer .footer_bottom .inner_footer_bottom {
+    max-width: 1280px;
+    margin: auto;
+}
+
+.footer_bottom .rights {
+    font-size: 15px;
+    float: left;
+}
+.footer_bottom .rights span {
+    font-size: 16px;
+}
+.footer_bottom nav {
+    float: right;
+    max-width: 520px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+@media (max-width: 1625px) {
+    main .arrows {
+        width: 92%;
+        max-width: 1200px;
+        margin-top: 544px;
+    }
+    main .slick-dots {
+        bottom: -31px;
+    }
+}
+
+@media (max-width: 1405px) {
+    .sec0 {
+        margin: auto;
+    }
+    body > .wrapper {
+        flex-direction: column;
+    }
+    body > .wrapper .inner-wrapper {
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    section.discounts,
+    section.last-sales {
+        width: 40%;
+        margin-top: 0;
+    }
+    section.discounts a,
+    section.last-sales a {
+        width: 100%;
+    }
+    section.discounts article,
+    section.last-sales article {
+        margin-top: 10px;
+    }
+    .last-sales h1 {
+        margin-bottom: 20px !important;
+    }
+    section.discounts .grid {
+        margin-top: 0;
+    }
+}
+@media (max-width: 1325px) {
+    .sec0 {
+        width: 90%;
+    }
+
+    .sec0 article a {
+        width: 100%;
+    }
+
+    .calendar .container-fluid .container-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+    .calendar .container-inner div:not(.calendar .container-inner-1div) {
+        margin-left: 0;
+    }
+    .what-is {
+        padding: 70px 18px;
+    }
+    .what-is > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .what-is .group {
+        float: none;
+    }
+}
+
+
+@media (max-width: 1225px) {
+    .deflation {
+        padding: 35px 0;
+    }
+    .items {
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+
+    .what-is {
+        padding: 35px 18px;
+    }
+}
+
+@media (max-width: 1000px) {
+    footer .footer-items {
+        flex-direction: column;
+        align-items: center;
+        height: 400px;
+    }
+    footer .footer-items .item {
+        width: 267px;
+    }
+}
+
+@media (max-width: 915px) {
+    section.categories h1 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 715px) {
+    .sec0 article a {
+        grid-template-columns: 1fr 130px repeat(2, 1fr);
+    }
+
+
+}
+
+@media (max-width: 640px) {
+    section.discounts .name,
+    section.last-sales .name {
+        margin-left: 10px;
+    }
+
+    body > .wrapper .inner-wrapper {
+        flex-direction: column;
+    }
+
+    section.last-sales {
+        margin-top: 20px;
+    }
+
+    section.discounts,
+    section.last-sales {
+        width: 90%;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 540px) {
+    .sec0 .discount,
+    .sec0 .price {
+        display: none;
+    }
+}
+
+
+@media (max-width: 450px) {
+    section.categories .categories_inner {
+        flex-direction: column;
+        align-items: center;
+    }
+}
