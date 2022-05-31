@@ -1,318 +1,11 @@
-* {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    -webkit-transition: color 0.3s;
-    -o-transition: color 0.3s;
-    transition: color 0.3s;
-}
-header {
-    background-color: white;
-    height: 64px;
-}
-body {
-    background-color: #f3f3f3;
-    /* overflow-x: hidden; */
-    height: 2000px;
-    font-family: Play, Arial, sans-serif !important;
-}
-.magnifier {
-    margin-left: 4px;
-}
 
-a {
-    color: black;
-    text-decoration: none;
-}
-
-a:hover {
-    color: black;
-}
 
 h1 {
     font-weight: 700 !important;
     font-size: 20px !important;
 }
+ 
 
-.show {
-    display: block !important;
-}
-
-.price {
-    font-size: 16px;
-    font-weight: 600;
-}
-
-.more {
-    display: block;
-    text-transform: uppercase;
-    font-family: sans-serif;
-    font-size: 12px;
-    text-align: center;
-    padding: 27px 5px;
-    font-weight: 600;
-    height: auto;
-}
-
-.more:hover {
-    color: #ff793a;
-}
-
-a.arrow:hover {
-    cursor: pointer;
-}
-
-a.not-allowed:hover {
-    cursor: not-allowed;
-}
-
-.discount {
-    color: white;
-    font-weight: 500;
-    background-color: #01b599;
-    padding: 6px 12px;
-    display: inline;
-}
-
-.items {
-    margin: auto;
-    max-width: 1286px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-}
-
-.items .item {
-    max-width: 274px;
-    color: white;
-}
-
-.items .item img {
-    max-width: 274px;
-    width: 100%;
-    height: 128px;
-}
-
-.items .item > div {
-    background: #1c1c1c;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 40px;
-}
-
-.items .item .discount,
-.items .item .price {
-    margin-right: 7px;
-}
-.dropdown-content {
-    float: left;
-    overflow: hidden;
-    position: absolute;
-    background-color: #f9f9f9;
-    width: 100%;
-    left: 0;
-    -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    display: none;
-}
-
-.header {
-    max-width: 1286px;
-    margin: auto;
-}
-
-.small_arrows {
-    position: relative;
-}
-
-.small_arrows .arrow {
-    position: absolute;
-    top: 0;
-    display: inline-block;
-    border-radius: 100px;
-    border: 1px solid #e2e2e2;
-    padding: 14px 15px;
-    -webkit-transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    width: 33px;
-    height: 31px;
-}
-
-.small_arrows .arrow.right {
-    background: url(https://steampay.com/img/svg/next-round.svg) 50% no-repeat;
-    right: 12px;
-}
-
-.small_arrows .arrow.left {
-    right: 48px;
-    background: url(https://steampay.com/img/svg/prev-round.svg) 50% no-repeat;
-}
-
-header .headerDiv {
-    display: -webkit-box;
-
-    display: -ms-flexbox;
-
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: start;
-
-    width: 1200px;
-    height: 4em;
-}
-
-header .steampay {
-    margin-left: 40px !important;
-}
-
-header .catalogue,
-.list {
-    cursor: pointer;
-}
-
-header .searchOfGames {
-    position: absolute !important;
-    padding: 18px 1px;
-    border: none;
-    width: 110px;
-    right: -70px;
-    /* top: -32px; */
-    background-color: #fff;
-}
-
-/* margin-left ПОРТИТ РАБОТУ DROPDOWN */
-header .list {
-    margin-left: -108px !important;
-    margin-top: 10px !important;
-    -webkit-transition: fill 0.5s;
-    -o-transition: fill 0.5s;
-    transition: fill 0.5s;
-}
-
-header .list:hover {
-    fill: #ff793a;
-}
-header .searchOfGames:hover {
-    color: #ff793a;
-}
-
-header .catalogue {
-    margin-left: -5px !important;
-}
-
-header .currency {
-    font-size: 31px;
-    margin-right: -110px !important;
-}
-
-header a:hover:not(.currency) {
-    color: #ff793a;
-}
-
-header .currency:hover {
-    color: #ff793a;
-}
-
-header .support {
-    margin-left: -93px !important;
-}
-
-header .myBuys {
-    margin-left: -93px !important;
-}
-
-/* open trash_can */
-
-#open-button {
-    overflow: hidden;
-    height: 40px;
-    font-weight: 300;
-    -webkit-transition: height 0.5s;
-    -o-transition: height 0.5s;
-    transition: height 0.5s;
-    /* margin-right: -250px; */
-    /* position: relative; */
-    /* margin: auto; */
-    /* float: right; */
-}
-/* 
-#open-button .bi-trash {
-    position: relative;
-} */
-
-#open-button button {
-    width: 100%;
-    display: block;
-    padding: 8px 1px;
-    background-color: rgb(66, 161, 255);
-    color: white;
-    border: none;
-    position: relative;
-}
-
-#open-button.show {
-    overflow: hidden;
-    height: 280px;
-    -webkit-transition: height 0.5s;
-    -o-transition: height 0.5s;
-    transition: height 0.5s;
-    width: 280px;
-}
-
-#opencontent {
-    width: 280px;
-    background: white;
-    /* position: absolute; */
-}
-
-#opencontent .result,
-.game span {
-    float: right;
-}
-
-/* #opencontent .game {
-  margin-top: 10px;
-}
-#opencontent .result {
-  margin-top: 10px;
-} */
-
-#opencontent .wrapperDiv {
-    padding: 20px;
-    font-size: 12px;
-    /* position: absolute; */
-}
-
-#opencontent .wrapperDiv svg {
-    margin-bottom: 3px;
-}
-
-#opencontent .wrapperDiv svg:hover {
-    cursor: pointer;
-}
-
-#opencontent.wrapperDiv strong {
-    font-weight: 600;
-}
-
-#opencontent .wrapperDiv .game-money {
-    font-size: 14px;
-}
-
-#opencontent .wrapperDiv .result-money {
-    font-size: 16px;
-}
 
 main {
     background-color: rgb(50, 50, 50);
@@ -322,32 +15,120 @@ main {
     height: 584px;
 }
 
+
+
 main .slider {
     width: 96%;
     max-width: 1296px;
     margin-top: 30px;
 }
 
-main .slide div:nth-of-type(1) {
+main .slide > div {
+    background-size: 130% auto !important;
+    background-position: 50% 50% !important;
+    
+    -webkit-transition: background-size 500ms linear;
+    -moz-transition: background-size 500 linear;
+    -o-transition: background-size 500 linear;
+    -ms-transition: background-size 500ms linear;
+    transition: background-size 500ms linear;
+}
+
+
+main .slide > div:nth-of-type(1) {
     width: 70%;
     height: 500px;
     float: left;
-
     background: url(https://steampay.com/slider/Back%204%20Blood.jpg?1643046772)
         no-repeat;
-    background-size: cover;
-    background-position: 50% 50%;
+        /* background-size: cover;
+        background-position: 50% 50%;
+        transition: background-size 2.8s ease; */
+    
 }
 
-main .slide div:nth-of-type(2),
-main .slide div:nth-of-type(3) {
+main .slide > div:nth-of-type(2),
+main .slide > div:nth-of-type(3) {
     width: 30%;
     float: right;
     height: 250px;
     background: url(https://steampay.com/slider/PAYDAY%202.jpg) no-repeat;
-    background-size: cover;
+    /* background-size: cover;
     background-position: 50% 50%;
+	transition: background-size 2.8s ease; */
+
 }
+
+main .slide > div:hover {
+    cursor: pointer;
+    background-size: 140% auto !important;
+}
+
+main .wrapper {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .wrapper1 {
+    width: 82%;
+    margin-top: 435px;
+}
+
+main .wrapper2,
+main .wrapper3 {
+    margin-top: 190px;
+    width: 90%;
+
+}
+
+main .game-name {
+    font-size: 26px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+}
+
+main .slide .wrapper2 .game-name,
+main .slide .wrapper3 .game-name{
+    font-size: 19px;
+}
+
+
+main .price,
+main .discount {
+    font-size: 18px;
+    color: white;
+}
+
+main .price {
+    background-color: #0084ff;
+    padding: 6px;
+    margin-left: 5px;
+}
+
+main .discount {
+    font-weight: 600;
+    background: none;
+    border: 3px solid rgb(0, 89, 255);
+    padding: 4px;
+
+}
+
+main .strikethrough {
+    text-decoration: line-through;
+    color: black;
+    font-weight: 300;
+}
+ 
+
+
+
+
+
+
+
 
 main .arrows {
     position: absolute;
@@ -450,7 +231,6 @@ body > .wrapper .inner-wrapper {
 
 .sec0 article .price {
     font-size: 22px;
-    font-weight: 600;
 }
 .sec0 article a {
     width: 900px;

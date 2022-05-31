@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PaginationController;
+use App\Http\Controllers\TrashController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,4 +18,14 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::get('/', [PaginationController::class, 'discounts']);
+Route::get('/', [PaginationController::class, 'index']);
+Route::get('/pagination/fetch_data', [PaginationController::class, 'fetch_data']);
+Route::get('/trash_can', [TrashController::class, 'index']);
+
+Route::get('/adventures', function () {
+    return view('genres.adventures');
+});
+
+Route::get('/action', function () {
+    return view('genres.action');
+});
