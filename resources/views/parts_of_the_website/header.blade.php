@@ -1,7 +1,7 @@
 <header>
     <div class="headerDiv m-auto">
 
-        <a href="javascript://" class="steampay m-auto">
+        <a href="/" class="steampay m-auto">
             <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="black"
                 class="bi bi-controller ms-5 " viewBox="0 0 16 16">
                 <path
@@ -20,14 +20,14 @@
                     d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
             </svg></a>
               <ul class="submenu">
-                <li><a class="dropdown-item" href="javascript://main">Главная</a></li>
-                <li><a class="dropdown-item" href="javascript://catalogue">Каталог продукции</a></li>
-                <li><a class="dropdown-item" href="javascript://discount">Накопительная скидка</a></li>
-                <li><a class="dropdown-item" href="javascript://garanties">Гарантии</a></li>
-                <li><a class="dropdown-item" href="javascript://support">Поддержка</a></li>
-                <li><a class="dropdown-item" href="javascript://reviews">Отзывы</a></li>
-                <li><a class="dropdown-item" href="javascript://bonuses">Бонусная программа</a></li>
-                <li><a class="dropdown-item" href="javascript://personal_office">Личный кабинет</a></li>
+                <li><a class="dropdown-item" href="/">Главная</a></li>
+                <li><a class="dropdown-item" href="/catalogue">Каталог продукции</a></li>
+                <li><a class="dropdown-item" href="/discount">Накопительная скидка</a></li>
+                <li><a class="dropdown-item" href="/garanties">Гарантии</a></li>
+                <li><a class="dropdown-item" href="/support">Поддержка</a></li>
+                <li><a class="dropdown-item" href="/reviews">Отзывы</a></li>
+                <li><a class="dropdown-item" href="/bonuses">Бонусная программа</a></li>
+                <li><a class="dropdown-item" href="/personal_office">Личный кабинет</a></li>
               </ul>
             </div>
         </div>
@@ -43,7 +43,7 @@
             </svg>
         </a>
 
-        <a class="support m-auto" href="javascript://">поддержка</a>
+        <a class="support m-auto" href="/support">поддержка</a>
         <a class=" m-auto myBuys" href="javascript://">мои покупки</a>
 
   <form class="form0">

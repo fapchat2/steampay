@@ -89,31 +89,8 @@ lookedFor.onclick = () => {
     bestseller.style.borderBottom = "0px solid #ff793a";
 };
 
-$("main .slider").slick({
-    arrows: false,
-    dots: true,
-});
 
-$("main .left").click(function () {
-    $("main .slider").slick("slickPrev");
-});
-
-$("main .right").click(function () {
-    $("main .slider").slick("slickNext");
-});
-
-// $("section.discounts .slider").slick({
-//     arrows: false,
-// });
-
-// $("section.discounts .left").click(function () {
-//     $("section.discounts .slider").slick("slickPrev");
-// });
-
-// $("section.discounts .right").click(function () {
-//     $("section.discounts .slider").slick("slickNext");
-// });
-
+ 
 let arrowLeft = document.querySelector("main .left img");
 let arrowRight = document.querySelector("main .right img");
 

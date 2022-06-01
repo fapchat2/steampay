@@ -57,20 +57,20 @@ color: #ff793a;
 }  
 
 
-.adventures .list h2 {
+.games_adventures .list h2 {
     font-size: 20px;
     font-weight: 300;
 }
 
-.adventures .list .genre {
+.games_adventures .list .genre {
     color: rgb(120, 120, 120);
     font-weight: 300;
 }
 
-.adventures .list .price {
+.games_adventures .list .price {
     font-size: 22px;
 }
-.adventures .list a {
+.games_adventures .list a {
     /* max-width: 900px; */
     width: 100%;
     display: grid;
@@ -88,21 +88,21 @@ color: #ff793a;
     margin-top: 2px;
 }
 
-.adventures .list a:hover {
+.games_adventures .list a:hover {
     -webkit-filter: drop-shadow(0 0 0.75rem rgba(15, 15, 15, 0.253));
     filter: drop-shadow(0 0 0.75rem rgba(15, 15, 15, 0.253));
 }
 
-.adventures .list a:hover h1 {
+.games_adventures .list a:hover h1 {
     color: #ff793a;
 }
 
-.adventures .list .game {
+.games_adventures .list .game {
     margin-left: 15px !important;
 }
 
 
-.adventures {
+.games_adventures {
     max-width: 1166px;
     margin: auto;
     margin-top: 20px;
@@ -110,7 +110,7 @@ color: #ff793a;
 
 
 
-.adventures .list {
+.games_adventures .list {
     max-width: 784px;
     float: left;
 }

@@ -1,22 +1,39 @@
-@extends('genreslayout')
+<!DOCTYPE html>
+<html lang="en">
 
-@section('head')
-    <link rel="stylesheet" href="css/style/main_styles.css">
-    <link rel="stylesheet" href="css/style/classes.css">
-    <link rel="stylesheet" href="css/parts of the website/header.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+ 
+<link rel="stylesheet" href="css/style/main_styles.css">
+<link rel="stylesheet" href="css/style/classes.css">
+<link rel="stylesheet" href="css/parts_of_the_website/header.css">
+<link rel="stylesheet" href="css/parts_of_the_website/genres/style.css">
+<link rel="stylesheet" href="css/sliders/slider.css">
 
-    <link rel="stylesheet" href="css/genres/adventures/style.css">
-    <link rel="stylesheet" href="css/slider.css">
+@yield('title')
 
-    <title>Document</title>
-@endsection
+<link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0.12/dist/fancybox.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-@section('body')
+
+</head>
+
+<body>
+    @include('parts_of_the_website.header')
     <main>
 
         <div class="product container-fluid">
             <div>
-                <h1>Приключения</h1>
+                @yield('h1')
                 <div class="product_inner">
                     <div> Найдено 700 товара </div>
                     <label>
@@ -38,7 +55,7 @@
             </div>
         </div>
 
-        <div class="adventures">
+        <div class="games_adventures">
             <div class="container-fluid list">
                 <a href="javascript://">
                     <img src="https://steampay.com/image/madden-nfl-22.jpg?1635404176" alt="">
@@ -230,9 +247,8 @@
         </div>
 
     </main>
-    <link href="css/nouislider.css" rel="stylesheet">
-
-    <script src="js/nouislider.js"></script>
+    <link href="css/sliders/nouislider.css" rel="stylesheet">
+    <script src="js/sliders/nouislider.js"></script>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -241,6 +257,10 @@
     <script src="https://cdn.jsdelivr.net/npm/cataloguetrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
-    <script src="js/genres/adventures/slider.js"></script>
-    <script src="js/main/script.js"></script>
-@endsection
+    <script src="js/parts_of_the_website/adventures/slider.js"></script>
+    <script src="js/parts_of_the_website/main/script.js"></script>
+
+</body>
+ 
+
+</html>

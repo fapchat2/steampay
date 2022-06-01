@@ -23,7 +23,7 @@ integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jI
 </head>
 
 <body>
-    @include('header')
+    @include('parts_of_the_website.header')
         @yield('body')
 
 </body>

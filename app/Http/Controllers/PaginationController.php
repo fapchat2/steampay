@@ -11,7 +11,7 @@ class PaginationController extends Controller
     function index()
     {
      $discounts = DB::table('discounts')->simplePaginate(4);
-     return view('welcome', compact('discounts'));
+     return view('parts_of_the_website.welcome', compact('discounts'));
     }
 
     function fetch_data(Request $request)

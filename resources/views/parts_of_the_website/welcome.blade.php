@@ -4,8 +4,8 @@
 
 <link rel="stylesheet" href="css/style/main_styles.css">
 <link rel="stylesheet" href="css/style/classes.css">
-<link rel="stylesheet" href="css/parts of the website/header.css">
-<link rel="stylesheet" href="css/main/style.css">
+<link rel="stylesheet" href="css/parts_of_the_website/header.css">
+<link rel="stylesheet" href="css/parts_of_the_website/main/style.css">
 <title>Document</title>
 @endsection
 
@@ -934,15 +934,15 @@
             <nav>
                 <a href="javascript://">Соглашение</a>
                 <a href="javascript://">Партнерам</a>
-                <a href="javascript://">Поддержка</a>
+                <a href="/support">Поддержка</a>
                 <a href="javascript://">О сайте</a>
             </nav>
         </div>
 
     </div>
 </footer>
-<link rel="stylesheet" href="css/nouislider.css">
-<script src="js/nouislider.js"></script>
+<link rel="stylesheet" href="css/sliders/nouislider.css">
+<script src="js/sliders/nouislider.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
@@ -951,5 +951,7 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
 </script>
 
-<script src="js/main/script.js"></script>
+<script src="js/parts_of_the_website/main/script.js"></script>
+<script src="js/parts_of_the_website/main/slider.js"></script>
+
 @endsection
