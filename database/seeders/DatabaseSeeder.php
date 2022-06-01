@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             DiscountSeeder::class,
+            MainSeeder::class,
         ]);
     }
 }

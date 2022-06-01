@@ -2,24 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class PaginationController extends Controller
 {
 
-    function index()
+    public function index()
     {
-     $discounts = DB::table('discounts')->simplePaginate(4);
-     return view('parts_of_the_website.welcome', compact('discounts'));
+        $main = DB::table('main')->simplePaginate(3);
+        $discounts = DB::table('discounts')->simplePaginate(4);
+
+        return view('parts_of_the_website.welcome.welcome', compact('discounts'), compact('main'));
     }
 
-    function fetch_data(Request $request)
-    {
-     if($request->ajax())
-     {
-      $discounts = DB::table('discounts')->simplePaginate(4);
-      return view('pagination_discounts', compact('discounts'))->render();
-     }
-    }
 }

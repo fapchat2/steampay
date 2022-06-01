@@ -18,7 +18,7 @@ class DiscountSeeder extends Seeder
                 for ($i = 0; $i < 10; $i++) {
                     DB::table('discounts')->insert([
                         'name' => Str::random(20),
-                        'cost' => rand(1, 10),
+                        'price' => rand(1, 10),
                         'discount' => rand(15, 68),
                         'image_address' => "https://logowik.com/content/uploads/images/grand-theft-auto-v8194.jpg",
                     ]);

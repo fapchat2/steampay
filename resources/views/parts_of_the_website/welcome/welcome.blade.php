@@ -16,8 +16,9 @@
 <main>
     <div class="slider">
         <div class="slide">
-            <div>
-                <div class="wrapper1 wrapper">
+            @include('parts_of_the_website.welcome.welcome')
+            {{-- <div>
+                <div class="  wrapper">
                     <span class="game-name">back4blood</span>
                     <div>
                         <span class="discount">-9%</span>
@@ -26,7 +27,7 @@
                 </div>
             </div>
             <div>
-                <div class="wrapper2 wrapper">
+                <div class="  wrapper">
                     <span class="game-name">payday</span>
                     <div>
                         <span class="discount">-12%</span>
@@ -35,25 +36,16 @@
                 </div>
             </div>
             <div>
-                <div class="wrapper3 wrapper">
+                <div class="  wrapper">
                     <span class="game-name">payday</span>
                     <div>
                         <span class="discount">-90%</span>
                         <span class="price"> <span class="strikethrough">20$</span> 2$</span>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
-        <div class="slide">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div class="slide">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+
     </div>
 
     <div class='arrows'>
@@ -245,14 +237,13 @@
                     <span class="aside-block">от 40%</span>
                     <h1 class="discounts">Скидки</h1>
                 </div>
-                    {{-- {!! $discounts->links() !!} --}}
                     {!! $discounts->links('vendor.pagination.small-arrows') !!}
             </div>
 
 
             <article class="">
                 <div class="slider">
-                    @include('pagination_discounts')
+                    @include('parts_of_the_website.welcome.pagination_discounts')
                 </div>
 
 

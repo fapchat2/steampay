@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDiscountsTable extends Migration
+return new class extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,14 @@ class CreateDiscountsTable extends Migration
      */
     public function up()
     {
-        Schema::create('discounts', function (Blueprint $table) {
+        Schema::create('main', function (Blueprint $table) {
             $table->id();
-            $table->string('image_address');
-            $table->string('name');
-            $table->float('price');
+            $table->string('game_name');
             $table->float('discount');
+            $table->float('price');
+            $table->float('old_price');
             $table->timestamps();
         });
-
     }
 
     /**
@@ -31,6 +30,6 @@ class CreateDiscountsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('discounts');
+        Schema::dropIfExists('main');
     }
-}
+};

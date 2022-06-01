@@ -1,20 +1,4 @@
-$(document).ready(function () {
-    $(document).on("click", ".discounts .small_arows a", function (event) {
-        event.preventDefault();
-        // alert('something');
-        var page = $(this).attr("href").split("page=")[1];
-        fetch_data(page);
-    });
-
-    function fetch_data(page) {
-        $.ajax({
-            url: "/pagination/fetch_data?page=" + page,
-            success: function (data) {
-                $(".discounts .slider").html(data);
-            },
-        });
-    }
-});
+ 
 
  
 

@@ -16,7 +16,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [PaginationController::class, 'index']);
-Route::get('/pagination/fetch_data', [PaginationController::class, 'fetch_data']);
 Route::get('/trash_can', [TrashController::class, 'index']);
 
 
