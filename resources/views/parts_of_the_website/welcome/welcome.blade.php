@@ -16,7 +16,7 @@
 <main>
     <div class="slider">
         <div class="slide">
-            @include('parts_of_the_website.welcome.welcome')
+            @include('parts_of_the_website.welcome.pagination_main')
             {{-- <div>
                 <div class="  wrapper">
                     <span class="game-name">back4blood</span>
@@ -49,12 +49,15 @@
     </div>
 
     <div class='arrows'>
-        <div class="arrow left">
+        {{-- <div class="arrow left">
             <img src="" alt="">
         </div>
         <div class="arrow right">
             <img src="" alt="">
-        </div>
+        </div> --}}
+
+        {!! $main->links('vendor.pagination.adaptive-arrows') !!}
+
     </div>
 
 </main>
